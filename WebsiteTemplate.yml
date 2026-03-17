@@ -213,8 +213,8 @@ Resources:
               max = event.get('queryStringParameters').get('max')
               if False==min.isnumeric() or False==max.isnumeric():
                   message = 'Input only numbers'
-              elif min>max:
-                  message = 'Min is smaller than max'
+              elif min<max:
+                  message = 'Max is smaller than Min'
               else:
                   message = random.randint(int(min),int(max))
                   
